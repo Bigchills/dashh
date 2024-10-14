@@ -1,4 +1,3 @@
-import Image from "next/image";
 import DashboardCard from "@/components/dashboard/DashboardCard";
 import { Folder, MessageCircle, Newspaper, User } from "lucide-react";
 import PostsTable from "@/components/posts/PostsTable";

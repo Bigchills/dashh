@@ -5,7 +5,6 @@ import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { Form,
     FormControl,
-    FormDescription,
     FormField,
     FormItem,
     FormLabel,
@@ -55,13 +54,20 @@ const PostEditPage = ({params}:PostEditPageProps) => {
     })
 
     const handleSubmit=(data:z.infer<typeof formSchema>)=>{
+        // Update the post with the new data
+        if (post) {
+            post.title = data.title;
+            post.body = data.body;
+            post.author = data.author;
+            post.date = data.date;
+        }
+
         toast({
-            title:'post has been updated succesfully',
-            description:`Updated by ${post?.author} on ${post?.date}`
-
+            title:'Post has been updated successfully',
+            description:`Updated by ${data.author} on ${data.date}`
         })
-
     }
+
     return ( 
     <div>
         <Backbutton text='Back To Posts' link='/posts'/>
