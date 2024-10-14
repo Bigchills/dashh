@@ -1,13 +1,11 @@
 import {
     Command,
-    CommandDialog,
     CommandEmpty,
     CommandGroup,
     CommandInput,
     CommandItem,
     CommandList,
     CommandSeparator,
-    CommandShortcut,
   } from "@/components/ui/command"
   import { LayoutDashboard, Newspaper, CreditCard, Folders, User, Settings, } from "lucide-react";
   import Link from "next/link";

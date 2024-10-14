@@ -43,6 +43,8 @@ const LoginForm = () => {
 
         router.push('/')
 
+        console.log(data)
+
 
     }
     return ( 
